@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="main_suite" parallel="methods" thread-count="4">
+    <suite-files>
+        <suite-file path="ui_tests/home_page_ui_test_suite/home_page_ui_test_suite.xml"/>
+        <suite-file path="api_tests/api_test_suite.xml"/>
+        <suite-file path="reflection_tests/reflection_api_test_suite.xml"/>
+    </suite-files>
+</suite>
