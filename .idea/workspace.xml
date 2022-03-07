@@ -148,6 +148,7 @@
       <list>
         <item itemvalue="Application.TestRunner" />
         <item itemvalue="Application.TestRunner" />
+        <item itemvalue="Application.TestRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646441963974</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="minor updates">
+      <created>1646669263383</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1646669263383</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,6 +218,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Home task 2.1 Design patterns.&#10;Implement Factory and Decorator patterns.&#10;See to the ReflectionApiTest.java file. &quot;src/test/java/suites/reflection_tests/ReflectionApiTest.java&quot;" />
     <MESSAGE value="add gitignore file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gitignore file" />
+    <MESSAGE value="minor updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor updates" />
   </component>
 </project>
