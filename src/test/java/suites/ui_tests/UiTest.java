@@ -1,6 +1,7 @@
 package suites.ui_tests;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pages.base.BasePage;
 import pages.base.HomePage;
@@ -20,9 +21,15 @@ public class UiTest extends UiTestSuite {
     }
 
 
-    @BeforeMethod()
+    @BeforeMethod
     public void prepareTest() {
         basePage.openHomePage(projectEnvLabel);
+    }
+
+
+    @AfterMethod
+    public void finishMethod(ITestResult result) {
+        testRailWorker.setResult(result);
     }
 
 
