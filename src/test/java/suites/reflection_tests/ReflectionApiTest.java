@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import reporters.ReporterFactory;
 import reporters.ReporterType;
 import reporters.testDecorators.ConsoleReporterDecorator;
-import suites.api_tests.APITests;
+import suites.api_tests.UserAPITests;
 import suites.ui_tests.home_page_ui_test_suite.HomePageUiTests;
 import reporters.ConsoleReporter;
 import utils.test_methods_definer.TestMethodItem;
@@ -15,12 +15,12 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-public class ReflectionApiTest {
+public class ReflectionApiTest extends ReflectionTest{
 
     @Test
     public void test_3_verifyAnnotations() {
 
-        Class<APITests> apiTestClazz = APITests.class;
+        Class<UserAPITests> apiTestClazz = UserAPITests.class;
         Method[] apiTestsDeclaredMethods = apiTestClazz.getDeclaredMethods();
 
         Class<HomePageUiTests> uiTestClazz = HomePageUiTests.class;
