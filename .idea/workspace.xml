@@ -4,35 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60e4774a-bbbd-4b68-a1a6-3084c38f74bd" name="Changes" comment="add gitignore file">
-      <change afterPath="$PROJECT_DIR$/src/main/java/testrail/TestRailCredentials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/testrail/TestRailWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/testrail/TestTRunType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/suites/TestSuiteBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/suites/api_tests/APITest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/suites/api_tests/APITestSuite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/suites/reflection_tests/ReflectionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/suites/reflection_tests/ReflectionTestSuite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/api_test_cases_id.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/reflection_test_cases_id.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/ui_test_cases_id.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_31_0_1_jre.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_12_0.xml" beforeDir="false" />
+    <list default="true" id="60e4774a-bbbd-4b68-a1a6-3084c38f74bd" name="Changes" comment="minor updates">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Slack/SlackMessageBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Slack/SlackMessenger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reporters/ReporterBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/reporters/TestResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/constants/BaseUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/BaseUrl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/suites/api_tests/APITests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/suites/api_tests/UserAPITests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/suites/api_tests/api_test_suite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/suites/api_tests/api_test_suite.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/suites/reflection_tests/ReflectionApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/suites/reflection_tests/ReflectionApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/suites/ui_tests/UiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/suites/ui_tests/UiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/suites/ui_tests/UiTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/suites/ui_tests/UiTestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/suites/TestSuiteBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/suites/TestSuiteBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +91,19 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.MainUiSuite">
+    <configuration name="SlackMessenger" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Slack.SlackMessenger" />
+      <module name="epamCourse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Slack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TestRunner" />
       <module name="epamCourse" />
@@ -143,9 +135,11 @@
     <list>
       <item itemvalue="Application.TestRunner" />
       <item itemvalue="TestNG.MainUiSuite" />
+      <item itemvalue="Application.SlackMessenger" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SlackMessenger" />
         <item itemvalue="Application.TestRunner" />
         <item itemvalue="Application.TestRunner" />
       </list>
