@@ -9,10 +9,10 @@ import java.util.Set;
 
 public class ConsoleReporter implements TestResultReporter {
 
-   private final HashMap<String, List<TestMethodItem>> tests;
+    private HashMap<String, List<TestMethodItem>> tests = new HashMap<>();
 
-    public ConsoleReporter(HashMap<String, List<TestMethodItem>> tests) {
-        this.tests = tests;
+    public void setTests(HashMap<String, List<TestMethodItem>> tests) {
+       this.tests = tests;
     }
 
 

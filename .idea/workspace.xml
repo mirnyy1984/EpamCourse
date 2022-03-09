@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60e4774a-bbbd-4b68-a1a6-3084c38f74bd" name="Changes" comment="minor updates">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Slack/SlackMessageBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Slack/SlackMessenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/reporters/ReporterBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/reporters/TestResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/suites/TestSuiteBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/suites/TestSuiteBase.java" afterDir="false" />
+
+    <list default="true" id="60e4774a-bbbd-4b68-a1a6-3084c38f74bd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/reporters/ConsoleReporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reporters/ConsoleReporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reporters/ReporterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reporters/ReporterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reporters/testDecorators/ConsoleReporterDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reporters/testDecorators/ConsoleReporterDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/suites/reflection_tests/ReflectionApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/suites/reflection_tests/ReflectionApiTest.java" afterDir="false" />
+
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
