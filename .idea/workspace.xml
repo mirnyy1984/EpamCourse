@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60e4774a-bbbd-4b68-a1a6-3084c38f74bd" name="Changes" comment="" />
+    <list default="true" id="60e4774a-bbbd-4b68-a1a6-3084c38f74bd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/reporters/ConsoleReporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reporters/ConsoleReporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reporters/ReporterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reporters/ReporterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reporters/testDecorators/ConsoleReporterDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reporters/testDecorators/ConsoleReporterDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/suites/reflection_tests/ReflectionApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/suites/reflection_tests/ReflectionApiTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

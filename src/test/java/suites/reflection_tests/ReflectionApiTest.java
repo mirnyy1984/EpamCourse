@@ -30,7 +30,9 @@ public class ReflectionApiTest {
         HashMap<String, List<TestMethodItem>> testMethods = testMethodsDefiner.defineTestMethods(Arrays.asList(apiTestsDeclaredMethods, uiTestsDeclaredMethods));
 
         ReporterFactory reporterFactory = new ReporterFactory();
-        ConsoleReporter reporter = (ConsoleReporterDecorator) reporterFactory.createReport("This is Console reporter !", ReporterType.CONSOLE, testMethods);
+        ConsoleReporterDecorator reporter = (ConsoleReporterDecorator) reporterFactory.createReport(ReporterType.CONSOLE);
+        reporter.setTests(testMethods);
+        reporter.setReportTitle("This is Console reporter !");
         reporter.makeReport();
     }
 }
