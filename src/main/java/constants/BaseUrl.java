@@ -14,8 +14,6 @@ public enum BaseUrl {
     }
 
     public static String getBaseUrl(String label) {
-
-
         BaseUrl baseUrl = Arrays.stream(BaseUrl.values()).filter(itemLabel -> itemLabel.toString().equals(label))
                 .findAny()
                 .orElse(null);
