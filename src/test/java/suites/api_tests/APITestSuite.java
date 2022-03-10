@@ -6,12 +6,14 @@ import suites.TestSuiteBase;
 import testrail.TestRailWorker;
 import testrail.TestTRunType;
 
+
 public class APITestSuite extends TestSuiteBase {
 
     @BeforeSuite
     @Override
     public void beforeSuitePreconditions() {
-        testRailWorker = new TestRailWorker(TestTRunType.API);
+        String runName = "Run_name: " + TestTRunType.API + "_" + startRunTime;
+        testRailWorker = new TestRailWorker(TestTRunType.API, runName);
     }
 
     @AfterSuite

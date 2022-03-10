@@ -15,7 +15,8 @@ public class UiTestSuite extends TestSuiteBase{
     @BeforeSuite
     @Override
     public void beforeSuitePreconditions() {
-        testRailWorker = new TestRailWorker(TestTRunType.UI);
+        String runName = "Run_name: " + TestTRunType.UI + "_" + startRunTime;
+        testRailWorker = new TestRailWorker(TestTRunType.UI, runName);
         projectEnvLabel = "PROD";
         browser = "CHROME";
     }

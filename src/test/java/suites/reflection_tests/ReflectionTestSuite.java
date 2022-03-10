@@ -11,7 +11,8 @@ public class ReflectionTestSuite extends TestSuiteBase {
     @BeforeSuite
     @Override
     public void beforeSuitePreconditions() {
-        testRailWorker = new TestRailWorker(TestTRunType.REFLECTION);
+        String runName = "Run_name: " + TestTRunType.REFLECTION + "_" + startRunTime;
+        testRailWorker = new TestRailWorker(TestTRunType.REFLECTION, runName);
     }
 
     @AfterSuite
