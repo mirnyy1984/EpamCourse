@@ -26,7 +26,7 @@ public class SlackReporter extends ReporterBase {
         int failedTestCount = failedTests.size();
         int passedTestCount = testResults.size() - failedTestCount;
         String messageAttachmentColor = failedTestCount == 0 ? passedTestResultColor : failedTestResultColor;
-        TestResultStatusType finalResultType = failedTests.size() > 0 ? finalResultType = TestResultStatusType.FAILED : TestResultStatusType.PASSED;
+        //TestResultStatusType finalResultType = failedTests.size() > 0 ? finalResultType = TestResultStatusType.FAILED : TestResultStatusType.PASSED;
 
         SlackMessageBuilder messageBuilder = new SlackMessageBuilder(messageAttachmentColor);
 
@@ -35,19 +35,19 @@ public class SlackReporter extends ReporterBase {
                 .addDivider()
                 .addText("Start execute time: " + getSuiteRunStartTime())
                 .addText("End execute time: " + new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss").format(new Date()))
-                .addText("Passed test count: " + passedTestCount)
                 .addText("Total test count: " + testTotalCount)
                 .addText("Passed test count: " + passedTestCount)
                 .addText("Failed test count: " + failedTestCount)
                 .addDivider()
-                .addText("Failed tests: ");
+                .addText(" ------- Failed tests ------- ");
 
 
         for (TestResult result : failedTests) {
             messageBuilder
-                    .addText(result.getTestType())
-                    .addText(result.getTestName())
-                    .addText(result.getTestResultStatus().name());
+                    .addText("Test type: " + result.getTestType())
+                    .addText("Test name: " + result.getTestName())
+                    .addText("Cause of failure: " + result.getCauseOfFailure())
+                    .addDivider();
         }
 
         SlackMessenger.sendMessage(messageBuilder.buildMessage());

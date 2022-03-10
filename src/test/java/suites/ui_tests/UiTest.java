@@ -5,6 +5,9 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pages.base.BasePage;
 import pages.base.HomePage;
+import reporters.TestResult;
+import reporters.utils.TestResultStatusDefiner;
+import testrail.TestTRunType;
 import utils.WebDriverHandler;
 
 
@@ -30,6 +33,18 @@ public class UiTest extends UiTestSuite {
     @AfterMethod
     public void finishMethod(ITestResult result) {
         testRailWorker.setResult(result);
+
+        TestResult testResult = new TestResult()
+                .setRunId(runName)
+                .setTestType(TestTRunType.UI.name())
+                .setTestName(result.getMethod().getMethodName())
+                .setTestResultStatus(TestResultStatusDefiner.defineStatus(result.getStatus()));
+
+        if (!result.isSuccess()) {
+            testResult.setCauseOfFailure(result.getThrowable().toString());
+        }
+
+        reporter.addTestResult(testResult);
     }
 
 

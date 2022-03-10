@@ -5,7 +5,6 @@ import org.testng.annotations.BeforeSuite;
 import reporters.ReporterFactory;
 import reporters.ReporterType;
 import reporters.SlackReporter;
-import reporters.TestResultReporter;
 import suites.TestSuiteBase;
 import testrail.TestRailWorker;
 import testrail.TestTRunType;
@@ -15,8 +14,6 @@ import java.util.Date;
 
 
 public class APITestSuite extends TestSuiteBase {
-
-    protected String runName;
 
     @BeforeSuite
     @Override

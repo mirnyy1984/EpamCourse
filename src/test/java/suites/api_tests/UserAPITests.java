@@ -17,12 +17,51 @@ public class UserAPITests extends APITest {
                 .basePath("users/2")
                 .contentType(ContentType.JSON)
                 .when().get() .then().statusCode(200)
-                .body("data.first_name", equalTo("Janet"));
+                .body("data.first_name", equalTo("Jane"));
     }
 
     @TestType(testType = "api", testDescription = "test verify ui presents")
     @Test
     protected void test_2_checkUserLastName() {
+        given()
+                .baseUri("https://reqres.in/api/")
+                .basePath("users/2")
+                .contentType(ContentType.JSON)
+                .when().get()
+                .then().statusCode(200)
+                .body("data.last_name", equalTo("Weaver"));
+    }
+
+
+    @TestType(testType = "api", testDescription = "test verify ui presents 33333")
+    @Test
+    protected void test_3_only_for_testing() {
+        given()
+                .baseUri("https://reqres.in/api/")
+                .basePath("users/2")
+                .contentType(ContentType.JSON)
+                .when().get()
+                .then().statusCode(200)
+                .body("data.last_name", equalTo("Weaver"));
+    }
+
+
+    @TestType(testType = "api", testDescription = "test verify ui presents 44444")
+    @Test
+    protected void test_4_only_for_testing() {
+        given()
+                .baseUri("https://reqres.in/api/")
+                .basePath("users/2")
+                .contentType(ContentType.JSON)
+                .when().get()
+                .then().statusCode(200)
+                .body("data.last_name", equalTo("Weave"));
+    }
+
+
+    @TestType(testType = "api", testDescription = "test verify ui presents 5555")
+    @Test
+    protected void test_5_only_for_testing() {
         given()
                 .baseUri("https://reqres.in/api/")
                 .basePath("users/2")
