@@ -7,8 +7,10 @@ import org.testng.ITestResult;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+import java.util.Properties;
 
 public class TestRailWorker {
 
@@ -16,8 +18,8 @@ public class TestRailWorker {
     private Project project;
     private Run run;
 
-    public TestRailWorker(TestTRunType type) {
-        init(type);
+    public TestRailWorker(TestTRunType type, String runName) {
+        init(type, runName);
     }
 
 
@@ -40,7 +42,7 @@ public class TestRailWorker {
     }
 
 
-    private void init(TestTRunType type) {
+    private void init(TestTRunType type, String runName) {
         testRail = TestRail.builder(
                         TestRailCredentials.TESTRAIL_ACCOUNT_URL.getCredential(),
                         TestRailCredentials.USER_NAME.getCredential(), TestRailCredentials.USER_PASS.getCredential())
@@ -49,7 +51,7 @@ public class TestRailWorker {
         project = testRail.projects().get(Integer.parseInt(TestRailCredentials.PROJECT_ID.getCredential())).execute();
 
         run = testRail.runs().add(project.getId(), new Run()
-                        .setName(type.name() + "_" + new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss").format(new Date()))
+                        .setName(runName + "_")
                         .setIncludeAll(false))
                 .execute();
 
