@@ -13,7 +13,7 @@ public abstract class TestSuiteBase {
 
     protected TestRailWorker testRailWorker;
     protected ReporterBase reporter;
-    protected String startRunTime = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss").format(new Date());
+    protected String startRunTime;
 
     @BeforeSuite
     public abstract void beforeSuitePreconditions();
