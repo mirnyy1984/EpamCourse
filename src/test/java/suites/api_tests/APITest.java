@@ -12,9 +12,17 @@ public class APITest extends APITestSuite {
     @AfterMethod
     public void finishMethod(ITestResult result) {
         testRailWorker.setResult(result);
-        reporter.addTestResult(new TestResult(runName,
-                TestTRunType.API.name(),
-                result.getMethod().getMethodName(),
-                TestResultStatusDefiner.defineStatus(result.getStatus())));
+
+        TestResult testResult = new TestResult()
+                .setRunId(runName)
+                .setTestType(TestTRunType.API.name())
+                .setTestName(result.getMethod().getMethodName())
+                .setTestResultStatus(TestResultStatusDefiner.defineStatus(result.getStatus()));
+
+        if (!result.isSuccess()) {
+            testResult.setCauseOfFailure(result.getThrowable().toString());
+        }
+
+        reporter.addTestResult(testResult);
     }
 }

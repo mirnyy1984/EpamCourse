@@ -13,7 +13,9 @@ public abstract class TestSuiteBase {
 
     protected TestRailWorker testRailWorker;
     protected ReporterBase reporter;
+    protected String runName;
     protected String startRunTime;
+
 
     @BeforeSuite
     public abstract void beforeSuitePreconditions();
