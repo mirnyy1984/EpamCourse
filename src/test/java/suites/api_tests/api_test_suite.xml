@@ -4,7 +4,7 @@
 <suite name="api_suite">
     <test name="mock_api_tests">
         <classes>
-            <class name="suites.api_tests.APITests"/>
+            <class name="suites.api_tests.UserAPITests"/>
         </classes>
     </test>
 </suite>

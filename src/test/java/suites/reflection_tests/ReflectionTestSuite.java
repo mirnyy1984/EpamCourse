@@ -1,4 +1,4 @@
-package suites.ui_tests;
+package suites.reflection_tests;
 
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -6,20 +6,13 @@ import suites.TestSuiteBase;
 import testrail.TestRailWorker;
 import testrail.TestTRunType;
 
-
-public class UiTestSuite extends TestSuiteBase{
-
-    protected String projectEnvLabel;
-    protected String browser;
+public class ReflectionTestSuite extends TestSuiteBase {
 
     @BeforeSuite
     @Override
     public void beforeSuitePreconditions() {
-        testRailWorker = new TestRailWorker(TestTRunType.UI);
-        projectEnvLabel = "PROD";
-        browser = "CHROME";
+        testRailWorker = new TestRailWorker(TestTRunType.REFLECTION);
     }
-
 
     @AfterSuite
     @Override
