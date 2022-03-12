@@ -21,11 +21,29 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.0.0-M5</version>
                     <configuration>
-                        <groups>smoke,regression</groups>
+                        <!--<groups>smoke,regression</groups>-->
+                        <testFailureIgnore>true</testFailureIgnore>
                         <suiteXmlFiles>
                             <suiteXmlFile>src/test/java/suites/main_suite.xml</suiteXmlFile>
+                            <!-- <suiteXmlFile>src/test/java/suites/ui_tests/home_page_ui_test_suite/home_page_ui_test_suite.xml</suiteXmlFile> -->
                         </suiteXmlFiles>
+
+                        <properties>
+                            <property>
+                                <name>usedefaultlisteners</name>
+                                <value>false</value>
+                            </property>
+                            <property>
+                                <name>listener</name>
+                                <value>com.epam.reportportal.testng.ReportPortalTestNGListener</value>
+                            </property>
+                        </properties>
                     </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -70,35 +88,11 @@
                     <groupId>com.google.guava</groupId>
                     <artifactId>guava</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-databind</artifactId>
+                </exclusion>
             </exclusions>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.github.seratch/jslack -->
-        <dependency>
-            <groupId>com.github.seratch</groupId>
-            <artifactId>jslack</artifactId>
-            <version>3.4.2</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.13</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpmime -->
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpmime</artifactId>
-            <version>4.5.13</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.github.seratch/jslack-api-client -->
-        <dependency>
-            <groupId>com.github.seratch</groupId>
-            <artifactId>jslack-api-client</artifactId>
-            <version>3.4.2</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.slack.api/slack-api-client -->
@@ -108,13 +102,10 @@
             <version>1.20.1</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.9.0</version>
+            <groupId>com.epam.reportportal</groupId>
+            <artifactId>agent-java-testng</artifactId>
+            <version>5.1.1</version>
         </dependency>
-
-
     </dependencies>
 </project>

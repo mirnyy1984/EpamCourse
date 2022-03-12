@@ -6,8 +6,7 @@ import static io.restassured.RestAssured.given;
 
 public class SlackMessenger {
 
-    private static String webHookUrl = "https://hooks.slack.com/services/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";
-
+    private static String webHookUrl = "https://hooks.slack.com/services/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";
 
     public static void sendMessage(String message) {
         given()

@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 public class SlackReporter extends ReporterBase {
 
-    private String passedTestResultColor = "#58D68D ";
+    private String passedTestResultColor = "#58D68D";
     private String failedTestResultColor = "#CD5C5C";
 
     @Override
