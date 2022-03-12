@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="api_suite">
-
-    <test name="mock_api_tests">
+<suite name="sssss">
+    <test name="sss_test">
         <classes>
-            <class name="suites.api_tests.UserAPITests"/>
+            <class name="suites.testtestteset.Testsssss"/>
         </classes>
     </test>
 </suite>
